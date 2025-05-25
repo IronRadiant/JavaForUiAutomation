@@ -1,0 +1,124 @@
+:-"println" or "\n" means now this row is over and going on words will be written in next line. It do not have effect on
+the same statement where it is written.
+
+:-Comment used with "//" or /* .... */
+
+:-Write "sout" and press tab to write System.out.print();
+
+: System.out.println("Hello World");
+    Breakdown: System.out again is a class of Java, by default out is null and thus it means in code that print whatever
+                is written inside the double quotes post "print"
+                It as of now is printing in console or terminal, but we can give the out some value like File and then
+                it will write in that file.
+
+                out = file [It will not work directly, we have to add some more code lines too]
+                System.out.println("Hello World");
+
+:-2 types of data-types
+    1. Primitive data-types : Value remain same [Number on Paper]
+        int,double,char,boolean
+    2. Non-primitive data-types : Value changes [Google Sheet]
+        string,array,object
+
+    Declare the Type and then write the Name of the Variable: int age;
+    Assign a value to Variable: int age = 10 ;
+
+:- Take input from user: Done using Scanner class
+    1. import java.util.Scanner; "It will import the Scanner Class"
+    2. Scanner input = new Scanner(System.in); "It will create an object of Scanner Class"
+        Breakdown:
+            Scanner input: Here we introduce the name of the variable which we are gonna use and the type of it
+                           input is variable name
+                           Scanner is the reference datatype
+            new Scanner: It will create an object of Scanner Class
+                         new is the keyword to create the object
+                         Scanner is the class from which we are making object
+            (System.in): Inside it we will write the source of the input, here it means we are taking whatever input is
+                         getting inside the console
+            OBJECT CREATION CAN ONLY BE DONE WITH REFERENCE DATA TYPE
+    3. System.out.println("Enter your Name: "); "Any command to tell user"
+    4. scanner.nextLine(); "It will take all the input"
+                            Depending upon where it is written, the input is taken. The line where it is written, input
+                            will be taken at that place.
+                            System.out.println("Enter your Name With Spaces: ");
+                            String nameWithSpaces = scanner.next();
+                                First it will print then it will take input
+                            String nameWithSpaces = scanner.next();
+                            System.out.println("Enter your Name With Spaces: ");
+                                First it will take input then it will print
+    5. scanner.next(); "It will take input from user till the first space only"
+    6. scanner.nextInt: "It will take input as int only"
+    7. scanner.nextDouble: "It will take input as double i.e. will include Decimals"
+    8. scanner.nextBoolean: "It will take input as boolean value i.e. true or false"
+    9. scanner.close(); "It will close the scanner object"
+    10. COMMON ISSUE: Taking input of String after Integer / Double
+                      This happens because when we press enter, it takes it as an input "\n" and thus it goes as a value
+                      in the next line
+                System.out.print("What is our age: ");
+                int age = scanner.nextInt();
+
+                System.out.print("What is your Name: ");
+                String name = scanner.nextLine();
+
+                System.out.println("My age is: " + age);
+                System.out.println("My Name is: " + name);
+
+                Solution: Call the "nextLine" method of the "scanner" object post assigning User input to int variable
+                "scanner.nextLine()" after the int one and it will solve the issue
+
+:- Different Type of Operators
+    x = 10
+    y = 2
+        Augmented Assignment Operators: If I want the value of "x" to be x + y, I can do
+                                        x = x + y or the Augmented Assignment version is x += y
+
+        Decrement and Increment Operator: If we just want to change the value by 1, we can do that by "++" or "--"
+                                        x = x + 1 is same as x++
+                                        x = x - 1 is same as x--
+
+        Order of Operations: PEMDAS [Parenthesis, Exponents, Multiplication, Division, Addition, Subtraction]
+
+:- Wrapper class: Converts a variable into an object and then we can use different functions around it
+    int car = 5 is just car being defined as a variable with type as int
+    Integer car = 5, Integer is being used as a wrapper class to use further operations available under Integer class
+                     with car
+
+:- Highlighted Line in the debugger means what piece of line is gonna be executed when you press enter
+
+:- int a = 5;
+    1 is named as identifier in java
+    5 is named as literal in java
+    and it applies to everything be it class or package [Above example is just for Variable]
+
+:- int a = 234,000,000 wrong
+   int a = 234_000_000 correct
+            "_" is used in place of "," in java for maths to denote large numbers
+
+:- Type Conversion and Casting
+    Automatic:
+    float num = input.nextInt();
+        float defines in which it will be converted
+        int defines how the input will be taken
+        Left data type should be bigger than right datatype, here float is bigger than Int
+
+        int num = input.nextFloat(); will give the error
+            "java: incompatible types: possible lossy conversion from float to int" as for conversion and casting, the
+            data type in which we are converting should be of greater size from the one which has to be converted
+
+    Narrowing Conversion for usecases lke "int num = input.nextFloat();"
+        int num1 = (int) (82.30);
+            Left int determines the type of variable
+            Right int defines in which we are changing the input or value
+            Value inside () post (int) defines what is getting changes
+
+    Java always print the value in Unicode so if we give A as the input for int variable it will print 65
+
+    Rules for Type Promotion:
+        All the bytes, short and character values are promoted to int
+        If operand has long, float, double it will promote to it in that order
+
+:- Loops:
+    If we know the number of times we have to run the loop use FOR otherwise use WHILE
+
+
+
