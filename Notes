@@ -120,5 +120,28 @@ the same statement where it is written.
 :- Loops:
     If we know the number of times we have to run the loop use FOR otherwise use WHILE
 
+    In case of If and Else loops, either of them will only run
+
+    Do While loop will run at-least once as first it execute do and then check the condition in while
+
+    Syntax for "for" loop
+        for(initialization; condition; increment / decrement) {
+            body
+        }
+
+    Syntax for "while" loop
+        while(condition) {
+            body and increment /decrement
+        }
+
+    Syntax for "do while" loop
+        do {
+            body
+            increment / decrement
+        }while(condition) {
+            body
+        }
+
+
 
 
